@@ -1,0 +1,9 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search By Name" [(ngModel)]="searchTerm" />
+</div>
+
+<div class="row">
+  <div *ngFor="let employee of filteredEmployees">
+    <app-display-employee [employee]="employee" [searchTerm]="searchTerm"></app-display-employee>
+  </div>
+</div>
